@@ -1,4 +1,3 @@
-require "pry"
-def new
-  binding.pry
+def highest_rating
+  Show.maximum('ratings')
 end
