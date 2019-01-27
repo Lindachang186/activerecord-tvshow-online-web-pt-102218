@@ -32,9 +32,10 @@ class Show < ActiveRecord::Base
     a = []
     self.find do |s|
        if s.rating > 5
-         a << s 
-       end 
+         a << s
+       end
     end
+    a
   end
 
 end
