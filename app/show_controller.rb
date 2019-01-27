@@ -1,3 +1,3 @@
-def highest_rating(arg)
-  Show.maximum('ratings')
+def highest_rating()
+  Show.maximum(:rating)
 end
