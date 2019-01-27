@@ -1,3 +1,3 @@
-def highest_rating
+def highest_rating(arg)
   Show.maximum('ratings')
 end
