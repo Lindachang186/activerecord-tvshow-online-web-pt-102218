@@ -29,10 +29,8 @@ class Show < ActiveRecord::Base
   end
 
   def self.popular_shows
-    self.find_by do |s|
-      if s.rating > 5
-        s
-      end 
+    self.find do |s|
+       s.rating > 5
     end
   end
 
