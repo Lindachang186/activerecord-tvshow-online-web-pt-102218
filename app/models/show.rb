@@ -28,4 +28,12 @@ class Show < ActiveRecord::Base
     Show.sum(:rating)
   end
 
+  def self.popular_shows
+    self.find_by do |s|
+      if s.rating > 5
+        s
+      end 
+    end
+  end
+
 end
