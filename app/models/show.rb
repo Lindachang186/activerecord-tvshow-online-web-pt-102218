@@ -30,7 +30,7 @@ class Show < ActiveRecord::Base
 
   def self.popular_shows
     a = []
-    self.find do |s|
+    self.each do |s|
        if s.rating > 5
          a << s
        end
