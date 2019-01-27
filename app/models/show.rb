@@ -16,4 +16,12 @@ class Show < ActiveRecord::Base
     Show.minimum(:rating)
   end
 
+  def self.least_popular_show
+    self.find do |s|
+      if s.rating == self.lowest_rating
+        s.name
+      end
+    end
+  end
+
 end
